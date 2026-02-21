@@ -1,0 +1,55 @@
+manifest_version: 1
+repo:
+  name: forgeos-mechanisms
+  layer: mechanisms
+  semver: true
+  release_channel: slow
+
+interfaces:
+  exports:
+    - id: schemas.commit_record
+      version: 1
+      path: schemas/commit_record.schema.json
+    - id: docs.control_plane_state_machine
+      version: 1
+      path: docs/CONTROL_PLANE_STATE_MACHINE.md
+    - id: docs.deterministic_replay_spec
+      version: 1
+      path: docs/DETERMINISTIC_REPLAY_SPEC.md
+    - id: docs.substrate_guarantees
+      version: 1
+      path: docs/SUBSTRATE_GUARANTEES.md
+  consumes:
+    - id: governance.forgeecosystem
+      constraint: ">=1 <2"
+    - id: governance.aria
+      constraint: ">=1 <2"
+
+deps:
+  upstream:
+    - repo: ForgeEcosystem
+      ref: "v1.0.0"
+    - repo: ConditionalBoundedness
+      ref: "v1.0.0"
+    - repo: ARIA-Regulation-Layer
+      ref: "v1.0.0"
+    - repo: BoundedRuntime
+      ref: "v1.0.0"
+
+determinism:
+  required: true
+  profile: control-plane
+  checks:
+    - event_membrane
+    - config_freeze
+    - seed_governance
+    - routing_determinism
+    - commit_write_once
+    - replay_test
+    - no_concurrent_mutation
+    - persistence_quarantine
+
+ci:
+  github_actions:
+    workflow: .github/workflows/stack-integrity.yml
+    mode: strict

@@ -1,0 +1,7 @@
+min_scroll.yaml
+# Minimal placeholder fixture until compiler exists
+scroll_id: test.min.v0
+scroll_class: test
+version: 0.1.0
+body: "fixture"
+(This fixture is a placeholder by design; the determinism harness is real.)

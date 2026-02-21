@@ -1,0 +1,30 @@
+forgeos-mechanisms/
+  README.md
+  forge-deps.yaml
+  forge-deps.schema.json
+
+  CONTRIBUTING.md
+  RELEASE.md
+  SECURITY.md
+
+  docs/
+    CONTROL_PLANE_STATE_MACHINE.md
+    DETERMINISTIC_REPLAY_SPEC.md
+    SUBSTRATE_GUARANTEES.md
+    MECHANISM_SUMMARY.md
+
+  schemas/
+    commit_record.schema.json
+
+  scripts/
+    validate_forge_deps.py
+    determinism_check.sh
+    replay_harness.sh
+
+  tests/
+    fixtures/
+      min_scroll.yaml
+
+  .github/
+    workflows/
+      stack-integrity.yml
