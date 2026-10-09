@@ -29,7 +29,7 @@ deps:
   upstream:
     - repo: ForgeEcosystem
       ref: "v1.0.0"
-    - repo: ConditionalBoundedness
+    - repo: bounded-switching-architecture-specification
       ref: "v1.0.0"
     - repo: bounded-event-regulation-specification
       ref: "v1.0.0"
