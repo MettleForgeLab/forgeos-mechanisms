@@ -33,7 +33,7 @@ deps:
       ref: "v1.0.0"
     - repo: bounded-event-regulation-specification
       ref: "v1.0.0"
-    - repo: BoundedRuntime
+    - repo: bounded-generation-rule-deck
       ref: "v1.0.0"
 
 determinism:
