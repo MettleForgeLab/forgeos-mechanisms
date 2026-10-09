@@ -31,7 +31,7 @@ Mechanisms MUST:
 
 ## Dependencies
 
-**Upstream:** ForgeEcosystem, ConditionalBoundedness, ARIA-Regulation-Layer, BoundedRuntime  
+**Upstream:** ForgeEcosystem, ConditionalBoundedness, bounded-event-regulation-specification, BoundedRuntime
 **Downstream:** chest-engine, forge-domains, laforge-ops-verification
 
 Governance defines. Mechanisms compute. Domains declare. Chest orchestrates. Ops verifies.
